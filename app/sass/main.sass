@@ -1,0 +1,166 @@
+@import "reset"
+@import "vars"
+@import "fonts"
+
+.container
+    max-width: 454px
+    margin: 126px auto
+    background-color: #f8f8f8
+    border: 1px solid #d9d9d9
+    border-radius: 3px
+    box-shadow: 0px 0px 5px 0px rgba(204,204,204,1)
+    
+body
+    font-family: 'arial'
+    font-weight: 400
+    font-size: 10px
+    color: $top_color_text
+    
+.header
+    margin-top: 25px
+    .menu
+        position: relative
+        padding-left: 73px
+        background: linear-gradient(to bottom, #d2d2d2, #dddddd, #d0d0d0, #c4c4c4)
+        font-family: $oswald
+        font-weight: 400
+        color: $top_color_text
+        font-size: 14px
+        height: 49px
+        span
+            font-family: 'arial'
+            font-size: 10px
+            display: block
+            padding-top: 5px
+            text-shadow: none
+        .dropmenu
+            position: absolute
+            top: 49px
+            left: 0
+            width: 157px
+            padding-bottom: 13px
+            border: 1px solid #c0c0c0
+            background-color: #dadada
+            border-radius: 4px
+            box-shadow: 0px 0px 3px rgba(0, 0, 0, .3)
+            z-index: 10
+            visibility: hidden
+            transition: 0.1s 0.05s
+            li
+                padding: 0 0 4px 10px
+                margin: 0
+                &::before,
+                    content: none
+                &:last-child
+                    &::after
+                        content: none
+                &:hover
+                    &::after
+                        content: none
+                &:hover .dropmenu_lvl
+                    visibility: visible
+                    transition-delay: 0s
+                a
+                    width: 143px
+                    text-shadow: none
+                    padding-bottom: 8px
+                    border-bottom: 1px solid #c4c4c4
+                    &:hover
+                        color: $s_color
+                        &::after
+                            content: "\f0da"
+                            font-family: $icon
+                            position: absolute
+                            top: 3px
+                            right: -20px
+        .dropmenu_lvl
+            position: absolute
+            top: 0px
+            left: 169px
+            width: 157px
+            padding-bottom: 13px
+            border: 1px solid #c0c0c0
+            background-color: #dadada
+            border-radius: 4px
+            box-shadow: 0px 0px 3px rgba(0, 0, 0, .3)
+            z-index: 10
+            visibility: hidden
+            transition: 0.1s 0.05s
+            li
+                padding: 0 0 4px 10px
+                margin: 0
+                &::before,
+                    content: none
+                &:last-child
+                    &::after
+                        content: none
+                a
+                    width: 143px
+                    text-shadow: none
+                    padding-bottom: 8px
+                    border-bottom: 1px solid #c4c4c4
+                    &:hover
+                        color: $s_color
+                        &::after
+                            content: none
+        ul
+            padding-top: 7px
+            li
+                display: inline-block
+                position: relative
+                width: 115px
+                padding-bottom: 8px
+                padding-left: 10px
+                cursor: pointer
+                &:hover
+                    border-bottom: 5px solid $s_color
+                    &::after
+                        content: "\f0d7"
+                        font-family: $icon
+                        position: absolute
+                        top: 6px
+                        right: 5px
+                &:hover .dropmenu
+                    visibility: visible
+                    transition-delay: 0s
+                    li
+                        border-bottom: none
+                &::before
+                    content: ""
+                    background-color: #a4a4a4
+                    height: 24px
+                    width: 1px
+                    position: absolute
+                    left: 0px
+                    top: 3px
+                &:last-child
+                    width: 118px
+                    &::after
+                        content: ""
+                        background-color: #a4a4a4
+                        height: 24px
+                        width: 1px
+                        position: absolute
+                        right: 0px
+                        top: 3px
+            li+li
+                padding-left: 25px
+            a
+                text-shadow: #fff 0 1px
+                display: block
+                width: 100%
+
+.main
+    .text
+        padding-top: 20px
+        padding-bottom: 6px
+        padding-left: 20px
+        max-width: 390px
+        line-height: 18px
+        letter-spacing: 0.25px
+        span
+            display: block
+                
+                
+                
+@import "media"
